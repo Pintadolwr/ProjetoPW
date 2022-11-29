@@ -1,0 +1,136 @@
+body {
+    display: grid;
+    grid-template-columns: 100px auto 20%;
+    grid-template-areas: 'header header header'
+                            'nav receitas anuncios'
+                            'footer footer anuncios';
+    font-family: Arial, Helvetica, sans-serif;
+}    
+#menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}    
+#menu li {
+    flex-grow: 1;
+    font-size: 0;
+    line-height: 0;
+    text-shadow: none;
+    color: transparent;
+    text-align: center;
+    background-color: #CCC;
+}
+#menu li:hover {
+    flex-grow: 3;;
+    background-color: #EEE;
+}
+
+#menu a {
+    width: 100%;
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    height: 72px;
+    background-position: center center;
+    background-repeat: no-repeat; 
+}
+#menuHome {
+    background-image: url("../images/home.png");
+    width: 50%;
+    background-size: 72px;
+}
+#menuGoal1 {
+    background-image: url("../images/sabores.png");
+}
+#menuGoal2 {
+    background-image: url("../images/tecnologia.png");
+}
+#menuGoal3 {
+    background-image: url("../images/ingredientes.png");
+} 
+nav {
+    max-width: 100%
+}
+
+body > header {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: lightcoral;
+    grid-area: header;
+}
+
+body > nav{
+    grid-area: nav;
+}
+
+body > main{
+    grid-area: receitas;
+}
+
+body > aside{
+    grid-area: anuncios;
+}
+
+body > footer{
+    grid-area: footer;
+}
+
+body > header > img {
+    width: 200px;;
+}
+
+body > header > section{
+    width: calc(100% - 400px);
+    text-align: center;
+}
+
+body > main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main {
+    padding: 5px;
+    background-color: lightblue;
+}
+
+body > main > article {
+    width: 20%;
+    min-width: 200px;
+    margin: 10px;
+    padding: 5px;
+    background-color: lightsalmon;
+}
+
+body > main > article:nth-child(5){
+    order: -1;
+}
+
+body > main > article:nth-child(3){
+    align-self: flex-end;
+}
+
+body > main > article:nth-child(2){
+    align-self: flex-start;
+}
+
+body > main > article > figure{
+    text-align: center;
+    margin: 10px 0 px;
+}
+
+article > figure > img {
+    width: 150px;    
+}
+body > aside {
+    background-color: lightgreen;
+}
+body > footer {
+    background-color: lightgoldenrodyellow;
+}
