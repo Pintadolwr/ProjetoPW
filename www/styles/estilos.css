@@ -1,31 +1,31 @@
 body {
-    display: grid;
+    /*display: grid;
     grid-template-columns: 100px auto 20%;
     grid-template-areas: 'header header header'
                             'nav receitas anuncios'
                             'footer footer anuncios';
+    
+    */
     font-family: Arial, Helvetica, sans-serif;
 }    
 #menu {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+    position: relative;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }    
 #menu li {
-    flex-grow: 1;
     font-size: 0;
     line-height: 0;
-    text-shadow: none;
+    text-shadow:none;
     color: transparent;
+    float: left;
     text-align: center;
-    background-color: #CCC;
+    background-color: #79d1cc;
+    width: calc(100vw / 4 - 5px); /*5px barra de scroll*/
 }
 #menu li:hover {
-    flex-grow: 3;;
-    background-color: #EEE;
+    background-color: #58c5bf;
 }
 
 #menu a {
@@ -43,13 +43,19 @@ body {
     background-size: 72px;
 }
 #menuGoal1 {
-    background-image: url("../images/sabores.png");
+    background-image: url("../images/ofertas.png");
+    width: 50%;
+    background-size: 60px;
 }
 #menuGoal2 {
-    background-image: url("../images/tecnologia.png");
+    background-image: url("../images/portfolios.png");
+    width: 50%;
+    background-size: 60px;
 }
 #menuGoal3 {
-    background-image: url("../images/ingredientes.png");
+    background-image: url("../images/empresas.png");
+    width: 50%;
+    background-size: 100px /*72px;*/
 } 
 nav {
     max-width: 100%
@@ -59,7 +65,7 @@ body > header {
     display: flex;
     align-items: center;
     padding: 5px;
-    background-color: lightcoral;
+    background-color: #4dc1bb;
     grid-area: header;
 }
 
@@ -97,7 +103,7 @@ body > main{
 
 main {
     padding: 5px;
-    background-color: lightblue;
+    background-color: #c7ecea;
 }
 
 body > main > article {
@@ -105,7 +111,7 @@ body > main > article {
     min-width: 200px;
     margin: 10px;
     padding: 5px;
-    background-color: lightsalmon;
+    background-color: #c7ecea;
 }
 
 body > main > article:nth-child(5){
@@ -132,5 +138,5 @@ body > aside {
     background-color: lightgreen;
 }
 body > footer {
-    background-color: lightgoldenrodyellow;
+    background-color: #79d1cc;
 }
