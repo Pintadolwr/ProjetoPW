@@ -1,9 +1,10 @@
+/*
 function OfertaEmprego(nomeEmpresa, descricao, area, duracaoMeses, valorTotal, dataValidade){
     if(area === Area.Program || area === Area.DataBase || area === Area.SistemAdmin)
         var oferta = [nomeEmpresa, descricao, area, duracaoMeses, valorTotal, dataValidade];
     return oferta;
 };
-
+*/
 const Area = {
     Program: 'Programação',
     DataBase: 'Bases de Dados',
@@ -59,13 +60,13 @@ class Admin extends Entity{
 }
 
 class Profissionais extends Entity{
-    constructor(nome, dataNasc, genero, descricao, email, password, localidade, seen){
+    constructor(nome, dataNasc, genero, descricao, email, password, localidade, visible){
         super(nome, email, password);
         this.dataNasc = dataNasc;
         this.genero = genero;
         this.descricao = descricao;
         this.localidade = localidade;
-        this.seen = seen;
+        this.visible = visible;
     }
 }
 
