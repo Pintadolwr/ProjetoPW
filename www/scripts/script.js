@@ -11,6 +11,7 @@ const Area = {
     SistemAdmin: 'Administração de Sistemas'
 }
 
+
 class OfertaEmprego{
     constructor(nomeEmpresa, descricao, area, duracaoMeses, valorTotal, dataValidade){
         this.nomeEmpresa = nomeEmpresa;
@@ -22,7 +23,7 @@ class OfertaEmprego{
     }
     info(){
         return `Empresa: ${this.nomeEmpresa}, Descricao: ${this.descricao}, Area: ${this.area}, 
-        Duração: ${this.duracaoMeses}, Valor Total: ${this.valorTotal}, Data Validade: ${this.dataValidade}`;
+        Duração: ${this.duracaoMeses} meses, Valor Total: ${this.valorTotal} €, Data Validade: ${this.dataValidade}`;
     }
 }
 
@@ -88,3 +89,27 @@ class Curso{
         this.media = media;
     }
 }
+
+const ofertas = [];
+ofertas.push(new OfertaEmprego("Doloitte", "Empresa de Tecnologias Avançadas", "Programação",3, 1200, "28/12/2022"),  
+             new OfertaEmprego("CNN", "Noticias", "Televisao",6, 800, "21/06/2023"),
+             new OfertaEmprego("TVI", "Noticias", "Televisao",12, 900, "12/02/2023"),
+             new OfertaEmprego("Frescos e Enlatados", "Tranporte de congelados", "Transportes",6, 1000, "1/10/2023"));
+
+
+
+function listaOfertasEmprego(){
+    let listaOfertas = document.getElementById("ofertasEmprego");
+    if(listaOfertas !== null){
+        ofertas.forEach((item)=>{
+        let li = document.createElement("li");
+        li.innerText = item.info();
+        listaOfertas.appendChild(li);
+        })
+    }
+}
+
+
+window.addEventListener('load', function () {
+    listaOfertasEmprego();  
+})
