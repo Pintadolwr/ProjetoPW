@@ -43,22 +43,22 @@ body {
     width: 50%;
     background-size: 72px;
 }
-#menuGoal1 {
+#ofertas {
     background-image: url("../images/ofertas.png");
     width: 50%;
     background-size: 60px;
 }
-#menuGoal2 {
+#portfolios {
     background-image: url("../images/portfolios.png");
     width: 50%;
     background-size: 60px;
 }
-#menuGoal3 {
+#empresas {
     background-image: url("../images/empresas.png");
     width: 50%;
     background-size: 100px /*72px;*/
 }
-#menuGoal4{
+#autores{
     background-image: url("../images/autores.png");
     width: 50%;
     background-size: 100px;
