@@ -22,7 +22,8 @@ body {
     float: left;
     text-align: center;
     background-color: #79d1cc;
-    width: calc(100vw / 5 - 5px); /*5px barra de scroll*/
+    /*width: calc(100vw / 5 - 5px); /*5px barra de scroll*/
+    width: 20%;
 }
 #menu li:hover {
     background-color: #58c5bf;
@@ -63,7 +64,7 @@ body {
     background-size: 100px;
 }
 nav {
-    max-width: 100%
+    width: 100%
 }
 
 body > header {
