@@ -98,7 +98,7 @@ ofertas.push(new OfertaEmprego("Doloitte", "Empresa de Tecnologias Avançadas", 
 
 
 
-function listaOfertasEmprego(){
+/*function listaOfertasEmprego(){
     let listaOfertas = document.getElementById("ofertasEmprego");
     if(listaOfertas !== null){
         ofertas.forEach((item)=>{
@@ -112,4 +112,41 @@ function listaOfertasEmprego(){
 
 window.addEventListener('load', function () {
     listaOfertasEmprego();  
-})
+})*/
+
+var init = function(){
+    let listaOfertas = document.getElementById("ofertasEmprego");
+    if(listaOfertas !== null){
+        ofertas.forEach((item)=>{
+        let li = document.createElement("li");
+        li.innerText = item.info();
+        listaOfertas.appendChild(li);
+        })
+    }
+
+    var btnInserir = document.getElementById("btnInserir");
+    var btnRemover = document.getElementById("btnRemover");
+    var oferta;
+
+    var inserir = function(){
+        oferta = prompt("Nome Empresa|Descrição|Área|Duração (Meses)|Valor Total|Data de validade");
+        if(oferta){
+            let arrOferta = oferta.split("|");
+            return new OfertaEmprego(arrOferta[0],arrOferta[1],arrOferta[2],arrOferta[3],arrOferta[4],arrOferta[5],)
+
+        }
+    }
+
+    btnInserir.addEventListener("click", function(evt){
+        oferta = inserir();
+
+        var li = document.createElement("li");
+        var txtLi = document.createTextNode(oferta.show);
+
+        li.appendChild(txtLi);
+        listaPessoas.appendChild(li);
+    });
+
+}
+
+window.onload = init;
