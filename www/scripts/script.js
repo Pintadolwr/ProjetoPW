@@ -98,7 +98,7 @@ ofertas.push(new OfertaEmprego("Doloitte", "Empresa de Tecnologias Avançadas", 
 
 
 
-/*function listaOfertasEmprego(){
+function listaOfertasEmprego(){
     let listaOfertas = document.getElementById("ofertasEmprego");
     if(listaOfertas !== null){
         ofertas.forEach((item)=>{
@@ -110,20 +110,7 @@ ofertas.push(new OfertaEmprego("Doloitte", "Empresa de Tecnologias Avançadas", 
 }
 
 
-window.addEventListener('load', function () {
-    listaOfertasEmprego();  
-})*/
-
-var init = function(){
-    let listaOfertas = document.getElementById("ofertasEmprego");
-    if(listaOfertas !== null){
-        ofertas.forEach((item)=>{
-        let li = document.createElement("li");
-        li.innerText = item.info();
-        listaOfertas.appendChild(li);
-        })
-    }
-
+function btnsOfertas(){
     var btnInserir = document.getElementById("btnInserir");
     var btnRemover = document.getElementById("btnRemover");
     var oferta;
@@ -149,4 +136,7 @@ var init = function(){
 
 }
 
-window.onload = init;
+window.onload = (event) => {
+    listaOfertasEmprego(); 
+    //btnsOfertas();
+};
