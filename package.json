@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/Pintadolwr/ProjetoPW#readme",
   "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
     "nano": "^10.1.1",
     "request": "^2.88.2",
     "sax": "^1.2.4"
