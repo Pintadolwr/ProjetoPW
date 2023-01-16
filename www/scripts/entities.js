@@ -80,4 +80,8 @@ class Profissionais extends Entity{
         this.localidade = localidade;
         this.visible = visible;
     }
+    info(){
+        return `${super.info()}, ${this.dataNasc}, ${this.genero}, ${this.descricao},
+         ${this.localidade}`;
+    }
 }
