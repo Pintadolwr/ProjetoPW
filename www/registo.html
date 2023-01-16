@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autores</title>
+    <link href="styles/estilos.css" rel="stylesheet">
+    <script type="application/javascript" src="scripts/curso.js"></script>
+    <script type="application/javascript" src="scripts/entities.js"></script>
+    <script type="application/javascript" src="scripts/localTrabalho.js"></script>
+    <script type="application/javascript" src="scripts/ofertaEmprego.js"></script>
+    <script type="application/javascript" src="scripts/script.js"></script>
+</head>
+<body>
+    <header>
+        <img src="./images/rede.png" alt="Rede">
+        <section>
+            <h1>Rede Social de Portfólios</h1>
+            <h3>Projeto PW</h3>
+        </section>
+        <section>
+            <ul id="autentificacao">
+                <li><a id="btnLogin" href="login.html">Login</a></li>
+                <li><a id="btnRegisto" href="registo.html">Registo</a></li>
+            </ul>
+        </section>
+    </header>
+    <nav>
+        <ul id="menu">
+            <li><a id="menuHome" href="index.html">Home</a></li>
+            <li><a id="ofertas" href="ofertas.html">Ofertas de Emprego</a></li>
+            <li><a id="portfolios" href="portfolios.html">Portfolio de Curriculos</a></li>
+            <li><a id="empresas" href="empresas.html">Empresas</a></li>
+            <li><a id="autores" href="autores.html">Autores</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form>
+            <div class="one">
+                <div class="registerP">
+                  <h3>Crie um conta Profissional</h3>
+                  <form id="formP">
+                    <div>
+                      <label for="nameP">Nome</label>
+                      <input type="text" id="nameP" spellcheck="false" placeholder="Henrique Furtado"/>
+                    </div>
+                    <div>
+                        <label for="dataNascimento">Data de nascimento</label>
+                        <input type="date" id="dataNascimento" name="dataNascimento">
+                    </div>
+                    <div>
+                        <label>Genero</label><br>
+                        <input type="radio" id="homem" name="genero" value="homem" checked>
+                        <label for="homem">Homem</label><br>
+                        <input type="radio" id="mulher" name="genero" value="mulher">
+                        <label for="mulher">Mulher</label><br>
+                    </div>
+                    <div>
+                        <label>Descrição</label><br>
+                        <textarea rows="4" cols="50" name="descriptionP" form="usrform">Descrição...</textarea>
+                    </div>
+                    <div>
+                      <label for="emailP">Email</label>
+                      <input type="text" id="emailP" spellcheck="false" placeholder="example@gmail.com"/>
+                    </div>
+                    <div>
+                      <label for="passwordP">Password</label>
+                      <input type="password" id="passwordP" />
+                    </div>
+                    <div>
+                        <label for="localidade">Localidade</label>
+                        <input type="password" id="localidade" />
+                    </div>
+                    <div>
+                        <label for="visto">Quer ser visto por empresas ?</label><br>
+                        <input type="radio" id="sim" name="visto" value="sim">
+                        <label for="sim">Sim</label><br>
+                        <input type="radio" id="nao" name="visto" value="nao" checked>
+                        <label for="nao">Não</label><br>
+                    </div>
+                    <div>
+                      <input type="submit" value="Criar Conta Profissional" id="create-accountP" class="button"/>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="two">
+                <div class="registerE">
+                  <h3>Crie um conta Empresa</h3>
+                  <form id="formE">
+                    <div>
+                      <label for="nameE">Nome</label>
+                      <input type="text" id="nameE" spellcheck="false" placeholder="BriColor"/>
+                    </div>
+                    <div>
+                        <label>Descrição</label><br>
+                        <textarea rows="4" cols="50" name="descriptionE" form="usrform">Descrição...</textarea>
+                    </div>
+                    <div>
+                        <label for="urlE">Url</label>
+                        <input type="text" id="urlE" spellcheck="false" placeholder="www.briColor.pt"/>
+                      </div>
+                    <div>
+                        <label for="emailE">Email</label>
+                        <input type="text" id="emailE" spellcheck="false" placeholder="briColor@gmail.com"/>
+                      </div>
+                    <div>
+                      <label for="passwordE">Password</label>
+                      <input type="password" id="passwordE" />
+                    </div>
+                    <div>
+                      <label></label>
+                      <input type="submit" value="Criar Conta Empresa" id="create-accountE" class="button"/>
+                    </div>
+                  </form>
+                </div>
+              </div>
+        </form>
+    </main>
+    <footer>
+        <!-- AUTORES (COLOCAR EM TODAS AS PAGINAS) -->
+        <p>Contacte-nos:</p>
+        <p><a href="mailto:202002226@estudantes.ips.pt">202002226@estudantes.ips.pt</a></p>
+        <p><a href="mailto:201901898@estudantes.ips.pt">201901898@estudantes.ips.pt</a></p>
+    </footer>
+</body>
+</html>
