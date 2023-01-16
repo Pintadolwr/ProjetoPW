@@ -38,3 +38,12 @@ CREATE TABLE curso (
     tipo varchar(100),
     media float
 );
+
+CREATE TABLE localTrabalho (
+    id int(6) unsigned auto_increment primary key,
+    nomeLocal varchar(255),
+    urlLogo varchar(255),
+    dataInicio date,
+    dataFim date,
+    descricao varchar(500)
+);  

@@ -18,3 +18,5 @@ function getEmpresas(req, res){
         }
     });
 }
+
+module.exports.getEmpresas = getEmpresas;
