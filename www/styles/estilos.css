@@ -148,3 +148,7 @@ article > figure > img {
 body > footer {
     background-color: #79d1cc;
 }
+
+#loginDiv{
+    height: 50vh;
+}
