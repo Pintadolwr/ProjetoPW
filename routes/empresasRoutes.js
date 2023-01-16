@@ -14,7 +14,7 @@ function getEmpresas(req, res){
             res.json({"message":"error", "error":resultObject.error})
         }
         else{
-            res.json({"message":"success", "empresa":resultObject.error})
+            res.json({"message":"success", "empresa":resultObject.empresa})
         }
     });
 }

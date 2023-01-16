@@ -8,8 +8,8 @@ const options = require("../config/options.json");
  */
 function getEmpresasModel(callback){
     let connection = mysql.createConnection(options.mysql); //criar a conexão
-    connection.conect(); //Abrir a conexão
-    connection.query('SELECT * FROM empresas',
+    connection.connect(); //Abrir a conexão
+    connection.query('select id, name, descricao, urlSite, email, urlLogo from empresa',
     function(err, rows, fields){
         if(err){
             callback({"error":err})

@@ -1,3 +1,4 @@
+drop database pw_projeto;
 create database if not exists pw_projeto character set 'utf8' collate 'utf8_general_ci';
 
 use pw_projeto;
@@ -28,7 +29,8 @@ CREATE TABLE profissionais (
     descricao varchar(500),
     email varchar(255),
     localidade varchar(255),
-    password varchar(50) not null
+    password varchar(50) not null,
+    visible boolean
 );
 
 CREATE TABLE curso (
@@ -46,4 +48,7 @@ CREATE TABLE localTrabalho (
     dataInicio date,
     dataFim date,
     descricao varchar(500)
-);  
+);
+
+INSERT INTO empresa (name, email, password) values('teste1', 'teste1@email.com', 'ppppp');
+select * from empresa;
