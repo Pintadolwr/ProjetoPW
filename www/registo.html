@@ -40,10 +40,10 @@
             <div class="one">
                 <div class="registerP">
                   <h3>Crie um conta Profissional</h3>
-                  <form id="formP">
+                  <form action="/registerP" method="post">
                     <div>
                       <label for="nameP">Nome</label>
-                      <input type="text" id="nameP" spellcheck="false" placeholder="Henrique Furtado"/>
+                      <input type="text" id="nameP"  name="nameP" spellcheck="false" placeholder="Henrique Furtado"/>
                     </div>
                     <div>
                         <label for="dataNascimento">Data de nascimento</label>
@@ -57,8 +57,8 @@
                         <label for="mulher">Mulher</label><br>
                     </div>
                     <div>
-                        <label>Descrição</label><br>
-                        <textarea rows="4" cols="50" name="descriptionP" form="usrform">Descrição...</textarea>
+                        <label for="descriptionP">Descrição</label><br>
+                        <textarea rows="4" cols="50" name="descriptionP" id="descriptionP" form="usrform">Descrição...</textarea>
                     </div>
                     <div>
                       <label for="emailP">Email</label>
@@ -70,7 +70,7 @@
                     </div>
                     <div>
                         <label for="localidade">Localidade</label>
-                        <input type="password" id="localidade" />
+                        <input type="password" id="localidade" name="localidade" />
                     </div>
                     <div>
                         <label for="visto">Quer ser visto por empresas ?</label><br>
@@ -80,7 +80,7 @@
                         <label for="nao">Não</label><br>
                     </div>
                     <div>
-                      <input type="submit" value="Criar Conta Profissional" id="create-accountP" class="button"/>
+                      <input type="submit" value="Criar Conta Profissional" id="registerP" class="button"/>
                     </div>
                   </form>
                 </div>
@@ -88,30 +88,30 @@
               <div class="two">
                 <div class="registerE">
                   <h3>Crie um conta Empresa</h3>
-                  <form id="formE">
+                  <form action="/registerE" method="post">
                     <div>
                       <label for="nameE">Nome</label>
-                      <input type="text" id="nameE" spellcheck="false" placeholder="BriColor"/>
+                      <input type="text" id="nameE" name="nameE" spellcheck="false" placeholder="BriColor"/>
                     </div>
                     <div>
-                        <label>Descrição</label><br>
-                        <textarea rows="4" cols="50" name="descriptionE" form="usrform">Descrição...</textarea>
+                        <label for="descriptionE">Descrição</label><br>
+                        <textarea rows="4" cols="50" id="descriptionE" name="descriptionE" form="usrform">Descrição...</textarea>
                     </div>
                     <div>
                         <label for="urlE">Url</label>
-                        <input type="text" id="urlE" spellcheck="false" placeholder="www.briColor.pt"/>
+                        <input type="text" id="urlE" name="urlE" spellcheck="false" placeholder="www.briColor.pt"/>
                       </div>
                     <div>
                         <label for="emailE">Email</label>
-                        <input type="text" id="emailE" spellcheck="false" placeholder="briColor@gmail.com"/>
+                        <input type="text" id="emailE" name="emailE" spellcheck="false" placeholder="briColor@gmail.com"/>
                       </div>
                     <div>
                       <label for="passwordE">Password</label>
-                      <input type="password" id="passwordE" />
+                      <input type="password" id="passwordE"  name="passwordE"/>
                     </div>
                     <div>
                       <label></label>
-                      <input type="submit" value="Criar Conta Empresa" id="create-accountE" class="button"/>
+                      <input type="submit" value="Criar Conta Empresa" id="registerE" class="button"/>
                     </div>
                   </form>
                 </div>

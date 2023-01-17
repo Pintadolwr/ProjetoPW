@@ -46,14 +46,14 @@
     <main>
       <div id="loginDiv">
         <h3>Fazer Login</h3>
-        <form>
+        <form action="/auth" method="post">
           <div>
             <label for="email">Email</label>
-            <input type="text" id="email" spellcheck="false" />
+            <input type="text" name="email" id="email" spellcheck="false" />
           </div>
           <div>
             <label for="password">Password</label>
-            <input type="password" id="password" />
+            <input type="password" name="password" id="password" />
           </div>
           <input type="submit" value="Login" id="login" class="button"/>                 
         </form>
