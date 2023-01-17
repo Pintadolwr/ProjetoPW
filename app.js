@@ -5,7 +5,7 @@ const options = require("./config/options.json");
 /** @todo Completar */
 const autenticacaoRoutes = require("./routes/autenticacaoRoutes");
 const empresasRoutes = require("./routes/empresasRoutes");
-const portfoliosRoutes = require("./routes/portfoliosRoutes");
+const profissionaisRoutes = require("./routes/profissionaisRoutes");
 const bodyParser = require("body-parser");
 const { application } = require("express");
 const app = express();
@@ -17,7 +17,8 @@ app.use(express.static("www"));
 // Empresas
 app.get("/empresa", empresasRoutes.getEmpresas);
 
-// Countries
+// Profissionais
+app.get("/profissionais", profissionaisRoutes.getProfissionais);
 
 //autenticacao
 app.post("/auth", autenticacaoRoutes.autenticate())
