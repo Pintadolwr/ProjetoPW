@@ -152,3 +152,8 @@ body > footer {
 #loginDiv{
     height: 50vh;
 }
+
+#autentificacao{
+    list-style-type: none;
+}
+

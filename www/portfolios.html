@@ -20,9 +20,22 @@
         </section>
         <section>
             <ul id="autentificacao">
-                <li><a id="btnLogin" href="login.html">Login</a></li>
-                <li><a id="btnRegisto" href="registo.html">Registo</a></li>
-            </ul>
+                <li>
+                  <form action="/login.html">
+                    <button type="submit">Login</button>
+                  </form>
+                </li>
+                <li>
+                  <form action="/registo.html">
+                    <button type="submit">Registar</button>
+                  </form>
+                </li>
+                <li>
+                  <form action="/logout" method="post">
+                    <button type="submit" formaction="/logout">Logout</button>
+                  </form>
+                </li>
+              </ul>
         </section>
     </header>
     <nav>

@@ -29,10 +29,14 @@ app.get("/profissionais", profissionaisRoutes.getProfissionais);
 //autenticacao
 app.post("/auth", autenticacaoRoutes.autenticate)
 
+app.post("/registerP", autenticacaoRoutes.registerP)
+
 app.post("/registerE", autenticacaoRoutes.registerE)
 
-app.post("/registerP", autenticacaoRoutes.registerP)
+app.post("/logout", autenticacaoRoutes.logout)
 
 app.listen(options.server.port, function () {
     console.log("Server running at port:" + options.server.port);
 });
+
+
