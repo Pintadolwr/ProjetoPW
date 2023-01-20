@@ -53,5 +53,5 @@ CREATE TABLE localTrabalho (
 INSERT INTO empresa (name, email, password) values('teste1', 'teste1@email.com', 'ppppp');
 select * from empresa;
 
-INSERT INTO profissionais (name, email, password, visible) values('teste2', 'teste2@email.com', 'ddddd');
+INSERT INTO profissionais (name, email, password, visible) values('teste2', 'teste2@email.com', 'ddddd', true);
 
