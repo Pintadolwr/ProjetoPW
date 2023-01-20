@@ -18,6 +18,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "static")));
 
+/**
+ * Funçao que verifica se o login é efetuado com sucesso, utilizando o email e password
+ * 
+ * @param {*} request 
+ * @param {*} response 
+ */
 function autenticate(request, response) {
   let connection = mysql.createConnection(options.mysql);
   connection.connect();
@@ -54,6 +60,12 @@ function autenticate(request, response) {
   connection.end();
 }
 
+/**
+ * Funçao responsavel pela criaçao e inserçao de uma conta nova do tipo Empresa na base de dados
+ * 
+ * @param {*} request 
+ * @param {*} response 
+ */
 function registerE(request, response) {
   let connection = mysql.createConnection(options.mysql);
   connection.connect();
@@ -86,6 +98,13 @@ function registerE(request, response) {
   connection.end();
 }
 
+
+/**
+ * Funçao responsavel pela criaçao e inserçao de uma conta nova do tipo Profissional na base de dados
+ * 
+ * @param {*} request 
+ * @param {*} response 
+ */
 function registerP(request, response) {
   console.log("entrou");
   let connection = mysql.createConnection(options.mysql);
@@ -122,6 +141,12 @@ function registerP(request, response) {
   connection.end();
 }
 
+/**
+ * Funçao responsavel pela realizaçao do logout, apos o utilizador ter feito o login
+ * 
+ * @param {*} request 
+ * @param {*} response 
+ */
 function logout(request, response) {
 	console.log(request.session.loggedin)
   if (request.session.loggedin) {
