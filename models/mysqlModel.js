@@ -20,6 +20,10 @@ function getEmpresasModel(callback){
     connection.end(); //Fechar conexão
 }
 
+/**
+ * Função para retornar a lista de profissionais da BD.
+ * @param {Function} callback Função de callback para ser chamada após obtermos o resultado da BD
+ */
 function getProfissionaisModel(callback){
     let connection = mysql.createConnection(options.mysql); //criar a conexão
     connection.connect(); //Abrir a conexão

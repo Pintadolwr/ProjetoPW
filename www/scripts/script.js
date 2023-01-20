@@ -5,19 +5,19 @@ function OfertaEmprego(nomeEmpresa, descricao, area, duracaoMeses, valorTotal, d
     return oferta;
 };
 */
-const Area = {
-    Program: 'Programação',
-    DataBase: 'Bases de Dados',
-    SistemAdmin: 'Administração de Sistemas'
-}
 
+/**
+ * Representa uma constante para a lista de ofertas a ser mostrada
+ */
 const ofertas = [];
 ofertas.push(new OfertaEmprego("Doloitte", "Empresa de Tecnologias Avançadas", "Programação",3, 1200, "28/12/2022"),  
              new OfertaEmprego("CNN", "Noticias", "Televisao",6, 800, "21/06/2023"),
              new OfertaEmprego("TVI", "Noticias", "Televisao",12, 900, "12/02/2023"),
              new OfertaEmprego("Frescos e Enlatados", "Tranporte de congelados", "Transportes",6, 1000, "1/10/2023"));
 
-
+/**
+ * Função que faz a criação da lista de ofertas de emprego e as coloca numa lista HTML
+ */
 function listaOfertasEmprego(){
     let listaOfertas = document.getElementById("ofertasEmprego");
     if(listaOfertas !== null){
@@ -29,6 +29,7 @@ function listaOfertasEmprego(){
     }
 }
 
+/*
 function btnsOfertas(){
     var btnInserir = document.getElementById("btnInserir");
     var btnRemover = document.getElementById("btnRemover");
@@ -54,6 +55,7 @@ function btnsOfertas(){
     });
 
 }
+*/
 
 window.onload = (event) => {
     listaOfertasEmprego(); 
